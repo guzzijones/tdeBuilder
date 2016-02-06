@@ -1,0 +1,9 @@
+*.txt
+*.tde
+*.log
+*.pyc
+*.swp
+/dist/
+convertDOCX.py
+*.docx
+/*.egg-info

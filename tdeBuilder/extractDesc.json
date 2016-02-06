@@ -1,0 +1,30 @@
+{
+    "parameters":{
+        "Entity":{
+            "default":"BHM"
+        },
+        "fileExt":{
+            "default":".txt"
+        }
+    },
+	
+	"tde_filename": "test_$(Entity).tde",
+	"input":{
+		"type": "file",
+		"file_info":{
+			"input_type":"starname",
+			"input_file_name":"data$(fileExt)",
+			"delimiter":"\t",
+			"column_headers":"column_headers"
+			}
+	},
+	
+	"columns":{
+
+		"Admit Date": "Date",
+		"Discharge Date":"Date",
+		"Patient Name": "Text",
+		"Address":"Text",
+        "Proc Flag":"Double"
+	}
+}

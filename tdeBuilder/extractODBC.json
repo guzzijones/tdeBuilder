@@ -1,0 +1,32 @@
+{
+    "parameters":{
+        "Entity":{
+            "default":"BHM"
+        },
+        "fileExt":{
+            "default":".txt"
+        }
+    },
+	
+	"tde_filename": "test_$(Entity).tde",
+	"input":{
+		"type":"sql",
+        "sql_info":{
+            "server":"ddmscenmvdb1",
+            "user":"dwuser",
+            "database":"IPATHP",
+            "uid":"dwuser",
+            "password":"xxxx",
+            "driver":"SQL Server",
+            "port":"1433",
+            "sql":"SELECT SIT_CODE,SIT_DESC from IPATHP.dbo.SITE"
+        }
+	},
+	
+	"columns":{
+
+		"SIT_CODE":"Text",
+        "SIT_DESC":"Text"
+	},
+
+}
