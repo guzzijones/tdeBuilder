@@ -145,7 +145,7 @@ Example:
 
                 "input_file_name":"data$(fileExt)",
 
-                "delimiter":"t",
+                "delimiter":"\t",
 
                 "column_headers":"column_headers"
 
