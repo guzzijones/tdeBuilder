@@ -351,13 +351,13 @@ Example
 
 # <a id="79566006354543-_Toc442275939">< must first be scrambled using the –p switch via the command line\.
 
-Usage:  tdeBuilder\.py –p \[password\]
+Usage:  tdeBuilder\.py –p [password]
 
-The output will be the password to be entered into the server\_upload  |serverpassword\_encoded field in your JSON settings file\.
+The output will be the password to be entered into the server\_upload  |serverpassword_encoded field in your JSON settings file\.
 
 Example
 
-    C:\\projects\\tableau\\extract>python tdeBuilder\.py \-p pass1234Blue
+    C:\\projects\\tableau\\extract>python tdeBuilder.py -p pass1234Blue
 
     encoded password:  cGFzczEyMzRCbHVl
 
