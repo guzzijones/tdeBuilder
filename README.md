@@ -213,7 +213,7 @@ This key is used to set the output name to be given to the \.tde file created\.
 
 Example
 
-    "tde\_filename": "test\_$\(Entity\)\.tde",
+    "tde_filename": "test_$(Entity).tde",
 
 ## <a id="79566006354543-_Toc442275934"></a>input
 
@@ -321,7 +321,7 @@ This key is used to set server settings to upload the \.tde to tableau server\. 
         1. server_upload
         1. server_address - address of your tableau server
         2. server_login - username to log in
-        3. server_password_encoded - encoded password using the –p switch via the command line\.  \(see Password Encode\)
+        3. server_password_encoded - encoded password using the –p switch via the command line.  (see Password Encode)
 
 Example
 
