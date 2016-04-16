@@ -233,6 +233,7 @@ Input types
 		4. columns\_headers
 			1. columns\_headers – file has column headers
 			2. standard - file does not have column headers use definitions in column section to label files
+	3.  ** add documentation for odbc**
 
 Example
 
