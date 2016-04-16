@@ -39,9 +39,9 @@ Structure
 
     Object
 
-        \{\}
+        {}
 
-        \{members\}
+        {members}
 
     Members
 
@@ -55,9 +55,9 @@ Structure
 
     Array
 
-        \[\]
+        []
 
-        \[elements\]
+        [elements]
 
     Elements
 
@@ -83,7 +83,7 @@ Structure
 
     Example
 
-    "columns":\{
+    "columns":{
 
             "Admit Date": "Date",
 
@@ -95,7 +95,7 @@ Structure
 
             "Proc Flag":"Double"
 
-        \},
+        },
 
 # <a id="79566006354543-_Toc442275930"></a>Configuration JSON Syntax
 
