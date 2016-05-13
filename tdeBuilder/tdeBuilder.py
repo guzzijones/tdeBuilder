@@ -487,7 +487,7 @@ class builder(object):
             conn=tdeS.ServerConnection()
             password=decodeWord(self.tde_settings_ins.server_password)            
             conn.connect(self.tde_settings_ins.server_address,self.tde_settings_ins.server_login,password,"")
-            conn.publishExtract(self.tde_settings_ins.tde_file,'default',self.tde_settings_ins.tde_file,True)
+            conn.publishExtract(self.tde_settings_ins.tde_file,'default',os.path.basename(self.tde_settings_ins.tde_file),True)
             conn.close()
             tdeS.ServerAPI.cleanup()
             print "Uploaded to server:",self.tde_settings_ins.server_address
