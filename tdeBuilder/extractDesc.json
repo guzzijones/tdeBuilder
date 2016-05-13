@@ -30,6 +30,7 @@
     "server_upload":{
         "server_address": "https://ddmstabl1t.ad.bhssf.org",
         "server_login": "tableauload",
-        "server_password_encoded": "bababa"
+        "server_password_encoded": "bababa",
+        "project":"default"
     }
 }
