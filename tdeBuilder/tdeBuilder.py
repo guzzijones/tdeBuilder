@@ -351,6 +351,7 @@ class tdeSettings(object):
             self.server_address=configValue(inDict["server_upload"]["server_address"],self.parameters).getValue()
             self.server_login=configValue(inDict["server_upload"]["server_login"],self.parameters).getValue()
             self.server_password=inDict["server_upload"]["server_password_encoded"] 
+            self.project=configValue(inDict["server_upload"]["project"],self.parameters).getValue()
             self.serverUpload=True
 
         self.inputInfo=inputConfig(inDict["input"],self.parameters)
@@ -487,7 +488,7 @@ class builder(object):
             conn=tdeS.ServerConnection()
             password=decodeWord(self.tde_settings_ins.server_password)            
             conn.connect(self.tde_settings_ins.server_address,self.tde_settings_ins.server_login,password,"")
-            conn.publishExtract(self.tde_settings_ins.tde_file,'default',os.path.basename(self.tde_settings_ins.tde_file),True)
+            conn.publishExtract(self.tde_settings_ins.tde_file,self.tde_settings_ins.project,os.path.basename(self.tde_settings_ins.tde_file),True)
             conn.close()
             tdeS.ServerAPI.cleanup()
             print "Uploaded to server:",self.tde_settings_ins.server_address
