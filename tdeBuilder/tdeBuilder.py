@@ -152,6 +152,7 @@ class odbc_info(source_info):
         self.cursor=self.conn.cursor()
         self.setTotalRows()
         self.totalRows=self.setTotalRows()
+
     def yieldRowsBase(self,decodeFormat):
         for i in self.input_filenames:
             with open(i,'rb') as myfile:
@@ -161,8 +162,11 @@ class odbc_info(source_info):
                     # skip the header row
                     next(myreader,None)
                     #for each row in the connection data
-                for myReaderRow in myreader:
-                    yield myReaderRow
+                for row in myreader:
+                    newRow=[]
+                    for item in row:
+                        newRow.append(str(item).decode(decodeFormat))
+                    yield newRow
     def setTotalRows(self):
         self.cursor.execute(self.sql)
         count=0
