@@ -151,19 +151,18 @@ class odbc_info(source_info):
         self.sql=configValue(jsonIn["sql"],parms).getValue()
         self.cursor=self.conn.cursor()
         self.setTotalRows()
-        self.totalRows=self.setTotalRows() 
-                   
-    def yieldRowsBase(self):
-        self.cursor.execute(self.sql)
-        for row in self.cursor.execute(self.sql):
-            newRow=[]
-            for item in row:
-                if isinstance(item,unicode):
-                    newRow.append(item.encode('utf-8'))
-                else:
-                    newRow.append(item)
-            yield newRow 
-
+        self.totalRows=self.setTotalRows()
+    def yieldRowsBase(self,decodeFormat):
+        for i in self.input_filenames:
+            with open(i,'rb') as myfile:
+                myreader=None
+                myreader=csv.reader(myfile, delimiter=self.delimiter, quotechar='"')
+                if self.column_headers==file_info.COLUMNHEADERS["HEADERS"]:
+                    # skip the header row
+                    next(myreader,None)
+                    #for each row in the connection data
+                for myReaderRow in myreader:
+                    yield myReaderRow
     def setTotalRows(self):
         self.cursor.execute(self.sql)
         count=0
@@ -451,8 +450,8 @@ class builder(object):
                     putRow.setNull( outputColIndex[columnName])
                 else :
                     try:
-                        valueDecoded=myReaderRow[index].decode(self.tde_settings_ins.inputInfo.fileInformation.encodeing)
-                        self.fieldSetterMap[tdeSettings.schemaIniTypeMap[self.tde_settings_ins.columns[columnName]]](putRow, outputColIndex[columnName], valueDecoded);
+                        #valueDecoded=myReaderRow[index].decode(self.tde_settings_ins.inputInfo.fileInformation.encodeing)
+                        self.fieldSetterMap[tdeSettings.schemaIniTypeMap[self.tde_settings_ins.columns[columnName]]](putRow, outputColIndex[columnName], myReaderRow[index]);
                     except:
                         print "column name", columnName, "contians invalid data"
                         print "value: ",myReaderRow[index] 
