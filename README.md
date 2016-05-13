@@ -173,7 +173,9 @@ Example:
 
             "server_login": "tableau",
 
-            "server_password_encoded": "VFl2JnlCYUpHZ0dZe"
+            "server_password_encoded": "VFl2JnlCYUpHZ0dZe",
+            
+            "project":"default"
 
         }
 
@@ -323,6 +325,7 @@ This key is used to set server settings to upload the \.tde to tableau server\. 
         1. server_address - address of your tableau server
         2. server_login - username to log in
         3. server_password_encoded - encoded password using the –p switch via the command line.  (see Password Encode)
+        4. project - project to upload the data source
 
 Example
 
@@ -350,7 +353,7 @@ Example
 
         encoded password:  cGFzczEyMzRCbHVl
 
-# <a id="79566006354543-_Toc442275939">< must first be scrambled using the –p switch via the command line\.
+# <a id="79566006354543-_Toc442275939"></a> must first be scrambled using the –p switch via the command line\.
 
 Usage:  tdeBuilder\.py –p [password]
 
@@ -366,5 +369,5 @@ Example
 
 Via the command line
 
-    python tdeBuilder.py -i [JSON configuration\]
+    python tdeBuilder.py -i [JSON configuration]
 
