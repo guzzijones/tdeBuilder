@@ -12,9 +12,8 @@
 	"input":{
 		"type":"sql",
         "sql_info":{
-            "server":"ddmscenmvdb1",
-            "user":"dwuser",
-            "database":"IPATHP",
+            "server":"servername",
+            "database":"databasename",
             "uid":"dwuser",
             "password":"xxxx",
             "driver":"SQL Server",
