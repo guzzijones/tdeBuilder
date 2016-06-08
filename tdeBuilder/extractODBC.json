@@ -28,7 +28,7 @@
         "SIT_DESC":"Text"
 	},
     "server_upload":{
-        "server_address": "https://ddmstabl1t.ad.bhssf.org",
+        "server_address": "https://xxxx.xx.org",
         "server_login": "tableauload",
         "server_password_encoded": "bababa",
         "project":"default"
