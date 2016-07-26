@@ -11,7 +11,8 @@ TDE files are compressed and indexes are created on columns that allows for fast
 ##Installation
 1.  ./setup.py install
 2.  Alternatively: pip install tdebuilder
-3.  
+
+
 ## <a id="79566006354543-_Toc442275927"></a>Process Overview
 
 1.  Create needed data using an ETL tool and output data to text files\.
