@@ -1,15 +1,17 @@
 tdeBuilder
 
 # <a id="79566006354543-_Toc442275925"></a>Introduction
-##Installation
-1.  ./setup.py install
-2.  Alternatively: pip install tdebuilder
+
 ## <a id="79566006354543-_Toc442275926"></a>Scope and Purpose
 
 TdeBuilder is used to create \.tde files from input data without having to use tableau desktop\.  This allows you to schedule \.tde file creation using scheduling software\.  Data can first be joined and or modified using an ETL tool and then dumped to text files\.  Tdebuilder can read in those text files and create a TDE\.  
 
 TDE files are compressed and indexes are created on columns that allows for faster reporting and query retrieval in Tableau Desktop\.  TDE files also use less disk space is than text files\.
 
+##Installation
+1.  ./setup.py install
+2.  Alternatively: pip install tdebuilder
+3.  
 ## <a id="79566006354543-_Toc442275927"></a>Process Overview
 
 1.  Create needed data using an ETL tool and output data to text files\.
