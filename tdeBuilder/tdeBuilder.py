@@ -150,7 +150,7 @@ class odbc_info(source_info):
             
         self.sql=configValue(jsonIn["sql"],parms).getValue()
         self.cursor=self.conn.cursor()
-        self.setTotalRows()
+        #self.setTotalRows()
         self.totalRows=self.setTotalRows()
 
     def yieldRowsBase(self,decodeFormat):
